@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password: Ashlesha@123
+    url: jdbc:mysql://localhost:3306/jfsaprdb
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
