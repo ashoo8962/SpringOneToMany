@@ -3,6 +3,8 @@ package com.restraurantapp.model;
 //import java.awt.MenuItem;
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
@@ -20,8 +22,9 @@ public class RestraurantDto {
 	private String cuisine;// south indian,north,italian
 	private String city;
 
-	@OneToMany
-	@JoinColumn(name="restraurant_id")
+	@OneToMany(cascade= CascadeType.ALL,fetch =FetchType.EAGER)
+	@JoinColumn(name ="restraurant_id")
+	
 	private Set<ItemDto> items;
 	
 

@@ -24,7 +24,7 @@ public class Item {
 	private Integer itemId;
 
 	@Column(length = 20)
-	private String itemtype; // bf or lunch 
+	private String itemType; // bf or lunch 
 	private double price;// south indian,north,italian
 	
 }

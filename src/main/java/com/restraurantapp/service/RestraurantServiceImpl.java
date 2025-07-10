@@ -56,32 +56,44 @@ public class RestraurantServiceImpl implements IRestraurantService {
 
 	@Override
 	public List<RestraurantDto> getByCuisine(String cuisine) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Restraurant> restraurants = restRepository.findByCuisine(cuisine);
+		return restraurants.stream().map(restraurant -> mapper.map(restraurant, RestraurantDto.class)).toList();
+
 	}
 
 	@Override
 	public List<RestraurantDto> getByCategory(String category) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Restraurant> restraurants = restRepository.findByCategory(category);
+		return restraurants.stream().map(restraurant -> mapper
+				.map(restraurant, RestraurantDto.class))
+				.toList();
+
 	}
 
 	@Override
 	public List<RestraurantDto> getByCuisineItemType(String cuisine, String itemType) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Restraurant> restraurants = restRepository.findByCuisineItemType(cuisine,itemType);
+		return restraurants.stream().map(restraurant -> mapper
+				.map(restraurant, RestraurantDto.class))
+				.toList();
+
 	}
 
 	@Override
 	public List<RestraurantDto> getByCategoryItemName(String category, String itemName) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Restraurant> restraurants = restRepository.findByCuisineItemType(category,"%"+itemName+"%");
+		return restraurants.stream().map(restraurant -> mapper
+				.map(restraurant, RestraurantDto.class))
+				.toList();
 	}
 
 	@Override
 	public List<RestraurantDto> getByItemName(String itemName) {
-		// TODO Auto-generated method stub
-		return null;
+		List<Restraurant> restraurants = restRepository.findByItemName("%"+itemName+"%");
+		return restraurants.stream()
+				.map(restraurant -> mapper
+				.map(restraurant, RestraurantDto.class))
+				.toList();
 	}
 
 }

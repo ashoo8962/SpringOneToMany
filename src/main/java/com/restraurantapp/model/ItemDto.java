@@ -13,7 +13,7 @@ public class ItemDto {
 
 	private String itemName;
 	private Integer itemId;
-	private String itemtype; // bf or lunch
+	private String itemType; // bf or lunch
 	private double price;// south indian,north,italian
 
 }
