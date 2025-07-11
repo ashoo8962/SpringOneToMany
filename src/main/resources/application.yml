@@ -1,9 +1,18 @@
+#spring:
+#  datasource:
+#    username: root
+#    password: Ashlesha@123
+#    url: jdbc:mysql://localhost:3306/jfsaprdb
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#    show-sql: true
 spring:
   datasource:
+    url: jdbc:mysql://localhost:3306/jfsaprdb
     username: root
     password: Ashlesha@123
-    url: jdbc:mysql://localhost:3306/jfsaprdb
-
   jpa:
     hibernate:
       ddl-auto: create
